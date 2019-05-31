@@ -1,6 +1,6 @@
 <?php
 
-$token = "YOUR_TOKEN_HERE";
+$token = Emergence\Slack\API::$accessToken;
 $url = "https://slack.com/api/users.admin.invite?token={$token}&email={$_EVENT['User']->Email}";
 
 $result = file_get_contents($url, null, stream_context_create(array(
